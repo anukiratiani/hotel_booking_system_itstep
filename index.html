@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ტეხილი — სასტუმროს დაჯავშნა</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ნავიგაციის მენიუ -->
+<nav>
+  <div class="nav-logo">
+    <img src="images/image1.png" alt="ტეხილი" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" data-page="home"   class="nav-link active">მთავარი</a></li>
+    <li><a href="#" data-page="hotels" class="nav-link">სასტუმროები</a></li>
+    <li><a href="#" data-page="booked" class="nav-link">დაჯავშნილი</a></li>
+  </ul>
+</nav>
+
+<!-- მთავარი -->
+<div id="page-home" class="page active">
+  <div class="welcome-block">
+    <h1>მოგესალმებით ტეხილში</h1>
+    <p>აირჩიეთ თქვენთვის სასურველი სასტუმრო და დაჯავშნეთ ნომერი სწრაფად და მარტივად.</p>
+    <button class="btn btn-primary" onclick="showPage('hotels')">არჩევა</button>
+  </div>
+</div>
+
+<!-- სასტუმროები-->
+<div id="page-hotels" class="page">
+  <div class="section-title">
+    <h1>სასტუმროები</h1>
+  </div>
+
+  <!-- ფილტრი -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>ქალაქი</label>
+      <select id="hotel-city-filter">
+        <option value="">ყველა ქალაქი</option>
+        <option>თბილისი</option>
+        <option>ბათუმი</option>
+        <option>ქუთაისი</option>
+        <option>გორი</option>
+      </select>
+    </div>
+    <div class="filter-actions">
+      <button class="btn btn-secondary" onclick="resetHotelFilter()">გასუფთავება</button>
+    </div>
+  </div>
+
+  <div id="hotels-grid" class="cards-grid"></div>
+</div>
+
+<!-- ოთახები -->
+<div id="page-rooms" class="page">
+  <button class="back-btn" onclick="goBack()">&#8592; უკან სასტუმროებზე</button>
+  <div class="section-title">
+    <h1 id="rooms-hotel-name">ნომრები</h1>
+  </div>
+
+  <!-- ფილტრი -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>ტიპი</label>
+      <select id="room-type-filter">
+        <option value="">ყველა</option>
+        <option value="single">სინგლ რუმი</option>
+        <option value="double">დაბლ რუმი</option>
+        <option value="king">კინგ საიზ რუმი</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>ფასი</label>
+      <select id="room-price-filter">
+        <option value="">ყველა</option>
+        <option value="25-50">25–50 ₾</option>
+        <option value="50-100">50–100 ₾</option>
+        <option value="100+">100+ ₾</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>შესვლის თარიღი</label>
+      <input type="date" id="room-checkin" />
+    </div>
+    <div class="filter-group">
+      <label>გამოსვლის თარიღი</label>
+      <input type="date" id="room-checkout" />
+    </div>
+    <div class="filter-actions">
+      <button class="btn btn-primary" onclick="applyRoomFilter()">ძებნა</button>
+      <button class="btn btn-secondary" onclick="resetRoomFilter()">გასუფთავება</button>
+    </div>
+  </div>
+
+  <div id="rooms-grid" class="cards-grid"></div>
+</div>
+
+<!-- დაჯავშნილი ნომრები -->
+<div id="page-booked" class="page">
+  <div class="section-title">
+    <h1>დაჯავშნილი ნომრები</h1>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>ქალაქი</label>
+      <select id="booked-city-filter">
+        <option value="">ყველა ქალაქი</option>
+        <option>თბილისი</option>
+        <option>ბათუმი</option>
+        <option>ქუთაისი</option>
+        <option>გორი</option>
+      </select>
+    </div>
+    <div class="filter-actions">
+      <button class="btn btn-secondary" onclick="resetBookedFilter()">გასუფთავება</button>
+    </div>
+  </div>
+
+  <div class="bookings-table-wrap">
+    <table id="bookings-table">
+      <thead>
+        <tr>
+          <th>სასტუმრო</th>
+          <th>ნომერი</th>
+          <th>სახელი / გვარი</th>
+          <th>ტელ.</th>
+          <th>შ/თ (Check-in)</th>
+          <th>გ/თ (Check-out)</th>
+          <th>ჯამი</th>
+          <th>სტატუსი</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="bookings-body"></tbody>
+    </table>
+  </div>
+  <div id="bookings-empty" class="empty-state hidden">
+    <p>დაჯავშნილი ნომრები არ არის.</p>
+  </div>
+</div>
+
+<!-- დაჯავშნის მოდალი -->
+<div id="booking-modal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>ნომრის დაჯავშნა</h2>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="modal-room-info" style="margin-bottom:18px;padding:12px;background:#f5f5f5;border-radius:6px;font-size:14px;"></div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>სახელი *</label>
+          <input type="text" id="book-name" placeholder="რა გქვია?" />
+        </div>
+        <div class="form-group">
+          <label>გვარი *</label>
+          <input type="text" id="book-surname" placeholder="რა გვარი ხარ?" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>ტელეფონის ნომერი *</label>
+        <input type="tel" id="book-phone" placeholder="როგორ დაგიკავშირდეთ?" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>შესვლის თარიღი *</label>
+          <input type="date" id="book-checkin" />
+        </div>
+        <div class="form-group">
+          <label>გამოსვლის თარიღი *</label>
+          <input type="date" id="book-checkout" />
+        </div>
+      </div>
+
+      <div id="price-preview" style="font-size:14px;color:#888;margin-top:4px;"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal()">გაუქმება</button>
+      <button class="btn btn-primary" onclick="submitBooking()">დაჯავშნა ✓</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
