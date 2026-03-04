@@ -1,0 +1,663 @@
+[
+  {
+    "id": 1,
+    "name": "მარკო პოლო",
+    "city": "თბილისი",
+    "stars": 5,
+    "rating": 7.3,
+    "address": "თბილისი, 5 ჭავჭავაძის გამზ.",
+    "phone": "+995 561 374 167",
+    "image": "images/მარკო პოლო.png",
+    "rooms": [
+      {
+        "id": 101,
+        "hotel_id": 1,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 33,
+        "capacity": 1,
+        "amenities": [
+          "TV",
+          "სამინდვრო",
+          "კონდიციონერი",
+          "მინი-ბარი"
+        ],
+        "available": true,
+        "image": "images/single1.jpg",
+        "favorite": false
+      },
+      {
+        "id": 102,
+        "hotel_id": 1,
+        "name": "სინგლ რუმი #2",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 42,
+        "capacity": 1,
+        "amenities": [
+          "ხედი ზღვაზე",
+          "აბაზანა",
+          "Wi-Fi"
+        ],
+        "available": true,
+        "image": "images/single2.jpg",
+        "favorite": true
+      },
+      {
+        "id": 112,
+        "hotel_id": 1,
+        "name": "დაბლ რუმი #2",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 72,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ზღვაზე",
+          "სეიფი",
+          "Wi-Fi",
+          "მინი-ბარი",
+          "TV"
+        ],
+        "available": true,
+        "image": "images/double2.jpg",
+        "favorite": false
+      },
+      {
+        "id": 113,
+        "hotel_id": 1,
+        "name": "დაბლ რუმი #3",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 74,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ქალაქზე",
+          "სეიფი",
+          "მინი-ბარი"
+        ],
+        "available": true,
+        "image": "images/double3.jpg",
+        "favorite": false
+      },
+      {
+        "id": 121,
+        "hotel_id": 1,
+        "name": "კინგ საიზ რუმი #1",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 108,
+        "capacity": 2,
+        "amenities": [
+          "TV",
+          "სეიფი",
+          "კონდიციონერი"
+        ],
+        "available": true,
+        "image": "images/king1.jpg",
+        "favorite": false
+      },
+      {
+        "id": 122,
+        "hotel_id": 1,
+        "name": "კინგ საიზ რუმი #2",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 112,
+        "capacity": 2,
+        "amenities": [
+          "სეიფი",
+          "ბალკონი",
+          "მინი-ბარი",
+          "კონდიციონერი",
+          "სამინდვრო",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/king2.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "კოლხეთი გრანდი",
+    "city": "თბილისი",
+    "stars": 3,
+    "rating": 9.6,
+    "address": "თბილისი, 71 ბარათაშვილის გამზ.",
+    "phone": "+995 543 640 993",
+    "image": "images/კოლხეთი გრანდი.jpg",
+    "rooms": [
+      {
+        "id": 201,
+        "hotel_id": 2,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 47,
+        "capacity": 1,
+        "amenities": [
+          "TV",
+          "ბალკონი",
+          "აბაზანა",
+          "მინი-ბარი",
+          "ხედი ზღვაზე"
+        ],
+        "available": true,
+        "image": "images/single3.jpg",
+        "favorite": true
+      },
+      {
+        "id": 221,
+        "hotel_id": 2,
+        "name": "კინგ საიზ რუმი #1",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 164,
+        "capacity": 2,
+        "amenities": [
+          "სამინდვრო",
+          "მინი-ბარი",
+          "ხედი ზღვაზე",
+          "სეიფი"
+        ],
+        "available": true,
+        "image": "images/king1.jpg",
+        "favorite": false
+      },
+      {
+        "id": 222,
+        "hotel_id": 2,
+        "name": "კინგ საიზ რუმი #2",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 167,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ზღვაზე",
+          "მინი-ბარი",
+          "ბალკონი"
+        ],
+        "available": true,
+        "image": "images/king3.jpg",
+        "favorite": true
+      },
+      {
+        "id": 223,
+        "hotel_id": 2,
+        "name": "კინგ საიზ რუმი #3",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 146,
+        "capacity": 2,
+        "amenities": [
+          "TV",
+          "Wi-Fi",
+          "ხედი ზღვაზე",
+          "სეიფი",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/king2.jpg",
+        "favorite": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "მთაწმინდა ვიუ",
+    "city": "თბილისი",
+    "stars": 3,
+    "rating": 7.5,
+    "address": "თბილისი, 86 ჭავჭავაძის გამზ.",
+    "phone": "+995 568 423 869",
+    "image": "images/მთაწმინდა ვიუ.jpg",
+    "rooms": [
+      {
+        "id": 401,
+        "hotel_id": 4,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 40,
+        "capacity": 1,
+        "amenities": [
+          "აბაზანა",
+          "Wi-Fi",
+          "სამინდვრო",
+          "TV"
+        ],
+        "available": true,
+        "image": "images/single3.jpg",
+        "favorite": true
+      },
+      {
+        "id": 403,
+        "hotel_id": 4,
+        "name": "სინგლ რუმი #3",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 42,
+        "capacity": 1,
+        "amenities": [
+          "სამინდვრო",
+          "TV",
+          "სეიფი",
+          "კონდიციონერი",
+          "Wi-Fi",
+          "ბალკონი"
+        ],
+        "available": true,
+        "image": "images/single2.jpg",
+        "favorite": false
+      },
+      {
+        "id": 411,
+        "hotel_id": 4,
+        "name": "დაბლ რუმი #1",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 97,
+        "capacity": 2,
+        "amenities": [
+          "Wi-Fi",
+          "ხედი ზღვაზე",
+          "ბალკონი",
+          "სეიფი",
+          "აბაზანა"
+        ],
+        "available": true,
+        "image": "images/double3.jpg",
+        "favorite": false
+      },
+      {
+        "id": 412,
+        "hotel_id": 4,
+        "name": "დაბლ რუმი #2",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 82,
+        "capacity": 2,
+        "amenities": [
+          "სამინდვრო",
+          "კონდიციონერი",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/double4.jpg",
+        "favorite": false
+      },
+      {
+        "id": 421,
+        "hotel_id": 4,
+        "name": "კინგ საიზ რუმი #1",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 151,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ზღვაზე",
+          "TV",
+          "Wi-Fi"
+        ],
+        "available": true,
+        "image": "images/king1.jpg",
+        "favorite": false
+      },
+      {
+        "id": 422,
+        "hotel_id": 4,
+        "name": "კინგ საიზ რუმი #2",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 153,
+        "capacity": 2,
+        "amenities": [
+          "სეიფი",
+          "TV",
+          "მინი-ბარი",
+          "კონდიციონერი",
+          "სამინდვრო"
+        ],
+        "available": true,
+        "image": "images/king3.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "ვერეს პალასი",
+    "city": "თბილისი",
+    "stars": 3,
+    "rating": 7.0,
+    "address": "თბილისი, 14 ჭავჭავაძის გამზ.",
+    "phone": "+995 581 995 516",
+    "image": "images/ვერეს პალასი.jpg",
+    "rooms": [
+      {
+        "id": 501,
+        "hotel_id": 5,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 43,
+        "capacity": 1,
+        "amenities": [
+          "კონდიციონერი",
+          "ხედი ქალაქზე",
+          "TV"
+        ],
+        "available": true,
+        "image": "images/single2.jpg",
+        "favorite": false
+      },
+      {
+        "id": 511,
+        "hotel_id": 5,
+        "name": "დაბლ რუმი #1",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 85,
+        "capacity": 2,
+        "amenities": [
+          "სეიფი",
+          "ხედი ზღვაზე",
+          "TV",
+          "მინი-ბარი"
+        ],
+        "available": true,
+        "image": "images/double4.jpg",
+        "favorite": false
+      },
+      {
+        "id": 521,
+        "hotel_id": 5,
+        "name": "კინგ საიზ რუმი #1",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 119,
+        "capacity": 2,
+        "amenities": [
+          "მინი-ბარი",
+          "ხედი ქალაქზე",
+          "სამინდვრო"
+        ],
+        "available": true,
+        "image": "images/king1.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "შავი ზღვა სუიტები",
+    "city": "ბათუმი",
+    "stars": 5,
+    "rating": 9.2,
+    "address": "ბათუმი, 45 ჭავჭავაძის გამზ.",
+    "phone": "+995 565 720 623",
+    "image": "images/შავი ზღვა სუიტები.jpg",
+    "rooms": [
+      {
+        "id": 601,
+        "hotel_id": 6,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 30,
+        "capacity": 1,
+        "amenities": [
+          "აბაზანა",
+          "Wi-Fi",
+          "სამინდვრო",
+          "მინი-ბარი"
+        ],
+        "available": true,
+        "image": "images/single1.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "ბათუმი ბიჩ",
+    "city": "ბათუმი",
+    "stars": 3,
+    "rating": 8.1,
+    "address": "ბათუმი, 99 რუსთაველის გამზ.",
+    "phone": "+995 564 324 280",
+    "image": "images/ბათუმი ბიჩ.jpg",
+    "rooms": [
+      {
+        "id": 701,
+        "hotel_id": 7,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 31,
+        "capacity": 1,
+        "amenities": [
+          "Wi-Fi",
+          "აბაზანა",
+          "ხედი ზღვაზე",
+          "სეიფი",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/single1.jpg",
+        "favorite": false
+      },
+      {
+        "id": 711,
+        "hotel_id": 7,
+        "name": "დაბლ რუმი #1",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 97,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ზღვაზე",
+          "სეიფი",
+          "აბაზანა",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/double2.jpg",
+        "favorite": false
+      },
+      {
+        "id": 712,
+        "hotel_id": 7,
+        "name": "დაბლ რუმი #2",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 69,
+        "capacity": 2,
+        "amenities": [
+          "TV",
+          "აბაზანა",
+          "მინი-ბარი",
+          "ხედი ზღვაზე",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/double4.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "კოლხეთი ბოულევარდი",
+    "city": "ბათუმი",
+    "stars": 5,
+    "rating": 8.5,
+    "address": "ბათუმი, 75 რუსთაველის გამზ.",
+    "phone": "+995 583 489 588",
+    "image": "images/kk.jpg",
+    "rooms": [
+      {
+        "id": 823,
+        "hotel_id": 8,
+        "name": "კინგ საიზ რუმი #3",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 153,
+        "capacity": 2,
+        "amenities": [
+          "TV",
+          "აბაზანა",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/king3.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "ბაგრატი ჰოტელი",
+    "city": "ქუთაისი",
+    "stars": 4,
+    "rating": 9.7,
+    "address": "ქუთაისი, 63 ბარათაშვილის გამზ.",
+    "phone": "+995 598 587 761",
+    "image": "images/qut.jpg",
+    "rooms": [
+      {
+        "id": 1024,
+        "hotel_id": 10,
+        "name": "კინგ საიზ რუმი #4",
+        "type": "king",
+        "type_label": "კინგ საიზ რუმი",
+        "size_label": "კინგ საიზი",
+        "price": 135,
+        "capacity": 2,
+        "amenities": [
+          "ხედი ქალაქზე",
+          "Wi-Fi",
+          "TV",
+          "ხედი ზღვაზე",
+          "კონდიციონერი"
+        ],
+        "available": true,
+        "image": "images/king1.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "გორის პალასი",
+    "city": "გორი",
+    "stars": 5,
+    "rating": 7.9,
+    "address": "გორი, 50 ბარათაშვილის გამზ.",
+    "phone": "+995 586 620 864",
+    "image": "images/gorione.jpg",
+    "rooms": [
+      {
+        "id": 1301,
+        "hotel_id": 13,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 33,
+        "capacity": 1,
+        "amenities": [
+          "ბალკონი",
+          "კონდიციონერი",
+          "Wi-Fi",
+          "TV",
+          "მინი-ბარი",
+          "სამინდვრო"
+        ],
+        "available": true,
+        "image": "images/single2.jpg",
+        "favorite": false
+      },
+      {
+        "id": 1311,
+        "hotel_id": 13,
+        "name": "დაბლ რუმი #1",
+        "type": "double",
+        "type_label": "დაბლ რუმი",
+        "size_label": "ორადგილიანი",
+        "price": 77,
+        "capacity": 2,
+        "amenities": [
+          "კონდიციონერი",
+          "ბალკონი",
+          "მინი-ბარი",
+          "TV",
+          "სამინდვრო",
+          "ხედი ქალაქზე"
+        ],
+        "available": true,
+        "image": "images/double4.jpg",
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "მუხრანი ჰოტელი",
+    "city": "გორი",
+    "stars": 3,
+    "rating": 9.5,
+    "address": "გორი, 96 რუსთაველის გამზ.",
+    "phone": "+995 565 200 878",
+    "image": "images/goritwo.jpg",
+    "rooms": [
+      {
+        "id": 1401,
+        "hotel_id": 14,
+        "name": "სინგლ რუმი #1",
+        "type": "single",
+        "type_label": "სინგლ რუმი",
+        "size_label": "ერთადგილიანი",
+        "price": 49,
+        "capacity": 1,
+        "amenities": [
+          "მინი-ბარი",
+          "ხედი ქალაქზე",
+          "სეიფი",
+          "აბაზანა",
+          "Wi-Fi",
+          "სამინდვრო"
+        ],
+        "available": true,
+        "image": "images/single2.jpg",
+        "favorite": false
+      }
+    ]
+  }
+]
